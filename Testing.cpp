@@ -1,18 +1,18 @@
-//Директивы препроцессора
+п»ї//Р”РёСЂРµРєС‚РёРІС‹ РїСЂРµРїСЂРѕС†РµСЃСЃРѕСЂР°
 #include <iostream>
 
-//Подключаемые библиотеки проекта
+//РџРѕРґРєР»СЋС‡Р°РµРјС‹Рµ Р±РёР±Р»РёРѕС‚РµРєРё РїСЂРѕРµРєС‚Р°
 #include "Functions.h"
 
-using namespace std; //позволяет использовать все идентификаторы из пространства имён std без указания префикса std::
+using namespace std; //РїРѕР·РІРѕР»СЏРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІСЃРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ РёР· РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° РёРјС‘РЅ std Р±РµР· СѓРєР°Р·Р°РЅРёСЏ РїСЂРµС„РёРєСЃР° std::
 
-/// <summary>CompletionArrayOfArrays - Функция для заполнения массива указателями на массив</summary>
-/// <param name="ArrayOfArrays"> - Массив указателей на массив</param>
-/// <param name="FirstOfArray"> - Первый указатель на массив</param>
-/// <param name="SecondOfArray"> - Второй указатель на массив</param>
-/// <param name="ThirdOdArray"> - Третий указатель на массив</param>
-/// <param name="FourthOfArray"> - Четвертый указатель на массив</param>
-/// <param name="FifthOfArray"> - Пятый указатель на массив</param>
+/// <summary>CompletionArrayOfArrays - Р¤СѓРЅРєС†РёСЏ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СѓРєР°Р·Р°С‚РµР»СЏРјРё РЅР° РјР°СЃСЃРёРІ</summary>
+/// <param name="ArrayOfArrays"> - РњР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="FirstOfArray"> - РџРµСЂРІС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="SecondOfArray"> - Р’С‚РѕСЂРѕР№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="ThirdOdArray"> - РўСЂРµС‚РёР№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="FourthOfArray"> - Р§РµС‚РІРµСЂС‚С‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="FifthOfArray"> - РџСЏС‚С‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
 void CompletionArrayOfArrays(int** ArrayOfArrays, int* FirstOfArray, int* SecondOfArray, int* ThirdOdArray, int* FourthOfArray, int* FifthOfArray) {
 	ArrayOfArrays[0] = FirstOfArray;
 	ArrayOfArrays[1] = SecondOfArray;
@@ -21,12 +21,12 @@ void CompletionArrayOfArrays(int** ArrayOfArrays, int* FirstOfArray, int* Second
 	ArrayOfArrays[4] = FifthOfArray;
 }
 
-/// <summary>Testing - Функция тестирования сортировки</summary>
+/// <summary>Testing - Р¤СѓРЅРєС†РёСЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё</summary>
 void Testing(void) {
 
-	bool IsTestFine = true; //Принимет значение true, когда тесты завершены без ошибок
+	bool IsTestFine = true; //РџСЂРёРЅРёРјРµС‚ Р·РЅР°С‡РµРЅРёРµ true, РєРѕРіРґР° С‚РµСЃС‚С‹ Р·Р°РІРµСЂС€РµРЅС‹ Р±РµР· РѕС€РёР±РѕРє
 
-	int size = 5; //Размеры массивов
+	int size = 5; //Р Р°Р·РјРµСЂС‹ РјР°СЃСЃРёРІРѕРІ
 
 	int* FirstOfArray = new int[size] { 5, 9, -4, 2, 13};
 	int* SecondOfArray = new int[size] { 16, 5, 12, -5, -1};
@@ -39,26 +39,26 @@ void Testing(void) {
 
 	for (int i = 0; i < size; i++) HeapSort(ArrayOfArrays[i], size);
 
-	int* TrueFirstOfArray = new int[size] { -4, 2, 5, 9, 13};  //Первый указатель на массив с заведомо истинными значениями
+	int* TrueFirstOfArray = new int[size] { -4, 2, 5, 9, 13};  //РџРµСЂРІС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ СЃ Р·Р°РІРµРґРѕРјРѕ РёСЃС‚РёРЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
 	int* TrueSecondOfArray = new int[size] { -5, -1, 5, 12, 16};
 	int* TrueThirdOdArray = new int[size] { -7, 0, 1, 3, 7};
 	int* TrueFourthOfArray = new int[size] { -1, 0, 1, 2, 18 };
 	int* TrueFifthOfArray = new int[size] { -1, 0, 1, 2, 8};
 
-	int** ArrayOfTrueArrays = new int* [size]; //Массив указателей на массив
+	int** ArrayOfTrueArrays = new int* [size]; //РњР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РјР°СЃСЃРёРІ
 	CompletionArrayOfArrays(ArrayOfTrueArrays, TrueFirstOfArray, TrueSecondOfArray, TrueThirdOdArray, TrueFourthOfArray, TrueFifthOfArray);
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
 			if (ArrayOfArrays[i][j] != ArrayOfTrueArrays[i][j]) {
-				cout << "Ошибка при тестировании в массиве " << i + 1 << "." << endl
-					<< "Ожидалось: " << ArrayOfTrueArrays[i][j] << endl
-					<< "Получено: " << ArrayOfArrays[i][j] << endl;
+				cout << "РћС€РёР±РєР° РїСЂРё С‚РµСЃС‚РёСЂРѕРІР°РЅРёРё РІ РјР°СЃСЃРёРІРµ " << i + 1 << "." << endl
+					<< "РћР¶РёРґР°Р»РѕСЃСЊ: " << ArrayOfTrueArrays[i][j] << endl
+					<< "РџРѕР»СѓС‡РµРЅРѕ: " << ArrayOfArrays[i][j] << endl;
 				IsTestFine = false;
 			}
 		}
 	}
 
-	if (IsTestFine) cout << "Тесты завершены успешно" << endl;
+	if (IsTestFine) cout << "РўРµСЃС‚С‹ Р·Р°РІРµСЂС€РµРЅС‹ СѓСЃРїРµС€РЅРѕ" << endl;
 
 }
