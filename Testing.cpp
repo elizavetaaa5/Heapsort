@@ -59,6 +59,6 @@ void Testing(void) {
 		}
 	}
 
-	if (IsTestFine) cout << "Тесты завершены успешно." << endl;
+	if (IsTestFine) cout << "Тесты завершены успешно" << endl;
 
 }
