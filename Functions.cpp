@@ -164,7 +164,7 @@ void Heapify(int Array[], int n, int i) {
     // Если largest не корень
     if (largest != i) {
         swap(Array[i], Array[largest]); // Обмениваем
-        Heapify(Array, n, largest); // Рекурсивно хипируем затронутое поддерево
+        Heapify(Array, n, largest); // Рекурсивно преобразуем в двоичную кучу затронутое поддерево
     }
 }
 
