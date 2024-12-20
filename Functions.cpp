@@ -33,8 +33,14 @@ string IsFileExist(void) {
         cout << "Введите относительный или абсолютный путь файла: ";
         getline(cin, FilePath);
 
-        if (fstream(FilePath)) {
+            path path(FilePath);
+            if (path.extension() != ".txt") {
+                FilePath += ".txt";
+                cout << "Расширение .txt добавлено к имени файла." << endl;
+            }
 
+            if (fstream(FilePath)) {
+            
             cout << "Файл уже существует" << endl;
 
             do {
@@ -81,6 +87,7 @@ string IsFileExist(void) {
     return FilePath;
 }
 
+
 /// <summary>TheListToFile - Функция записи данных в файл</summary>
 /// <param name="FileArray"> - Записываемый в файл массив</param>
 /// <param name="SizeOfArray"> - Записываемый в файл размер массива</param>
@@ -101,6 +108,7 @@ void TheListToFile(int* FileArray, int SizeOfArray) {
         case Writing:
             cout << "Сохранение в файл" << endl;
             PathName = IsFileExist();
+    
             /*
        ios_base::in     - открыть файл для чтения
        ios_base::out    - открыть файл для записи
@@ -109,6 +117,9 @@ void TheListToFile(int* FileArray, int SizeOfArray) {
        ios_base::trunc	 - удалить содержимое файла, если он существует
        ios_base::binary - открытие файла в двоичном режиме
        */
+           
+         
+
             File.open(PathName.c_str(), ios_base::trunc | ios_base::out);
             if (File.is_open()) {
                 File << SizeOfArray << endl;
