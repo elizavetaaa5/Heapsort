@@ -1,0 +1,62 @@
+// Подключаемые библиотеки
+#include <string>
+
+// Использованные пространства имен
+using namespace std;
+using namespace System::Data::OleDb;
+using namespace System;
+
+// <summary> SetArraysToDB - функция, сохраняющая массивы в базу данных </summary>
+// <param name="UnsortedArray - неотсортированный массив"></param>
+// <param name="SortedArray - отсортированный массив"></param>
+void SetArraysToDB(string UnsortedArray, string SortedArray) {
+
+	auto p = gcnew OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\lea05\\Desktop\\GraphicalHeapsort\\GraphicalHeapsort\\Database.mdb");
+
+	p->Open();
+	// Добавление строки в таблицу
+	string stringQuery = "INSERT INTO [Таблица массивов] (UnsortedArray, SortedArray) VALUES ('" + UnsortedArray + "', '" + SortedArray + "')";
+
+	String^ Query = gcnew String(stringQuery.data());
+
+	auto Command = gcnew OleDbCommand(Query);
+	Command->Connection = p;
+	Command->ExecuteNonQuery();
+}
+
+bool DeleteLineFromDB(int id) {
+
+	auto p = gcnew OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\lea05\\Desktop\\GraphicalHeapsort\\GraphicalHeapsort\\Database.mdb");
+
+	p->Open();
+	// Добавление строки в таблицу
+	String^ stringQuery = "DELETE FROM [Таблица массивов] WHERE ID =" + id + ";";
+
+	String^ Query = gcnew String(stringQuery);
+
+	auto Command = gcnew OleDbCommand(Query);
+	Command->Connection = p;
+	if (Command->ExecuteNonQuery()) return 1;
+
+	return 0;
+
+	p->Close();
+}
+
+bool DeleteAllFromBD() {
+
+	auto p = gcnew OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\lea05\\Desktop\\GraphicalHeapsort\\GraphicalHeapsort\\Database.mdb");
+
+	p->Open();
+
+	String^ Query = "DELETE FROM [Таблица массивов]";
+
+	auto Command = gcnew OleDbCommand(Query);
+	Command->Connection = p;
+
+
+	if (Command->ExecuteNonQuery()) return 1;
+	return 0;
+
+	p->Close();
+}

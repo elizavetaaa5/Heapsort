@@ -1,0 +1,5 @@
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\x64\Debug\GraphicalHeapsort.vcxproj.AssemblyReference.cache
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\x64\Debug\GraphicalHeapsort.FormDeleteAll.resources
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\x64\Debug\GraphicalHeapsort.FormDeleteLine.resources
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\x64\Debug\GraphicalHeapsort.MainWindow.resources
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\x64\Debug\GraphicalHeapsort.vcxproj.GenerateResource.cache

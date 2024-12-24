@@ -1,0 +1,9 @@
+﻿  MainWindow.cpp
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\MainWindow.h(566,12): warning C4305: инициализация: усечение из "int" в "char"
+  (компиляция исходного файла "MainWindow.cpp")
+  
+C:\Users\lea05\Desktop\GraphicalHeapsort\GraphicalHeapsort\MainWindow.h(566,14): warning C4309: инициализация: усечение константного значения
+  (компиляция исходного файла "MainWindow.cpp")
+  
+  ConnectionString.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  GraphicalHeapsort.vcxproj -> C:\Users\lea05\Desktop\GraphicalHeapsort\x64\Debug\GraphicalHeapsort.exe
